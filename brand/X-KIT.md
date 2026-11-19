@@ -3,7 +3,7 @@
 Display name:
 
 ```
-DCTY | the first with all three
+DCTY | correct logo, correct ticker
 ```
 
 Bio (147):

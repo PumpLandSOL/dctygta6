@@ -10,8 +10,8 @@
    "t": true,
    "n": false,
    "i": false,
-   "what": "outline logo, wrong name",
-   "short": "outline logo",
+   "what": "wrong logo",
+   "short": "wrong",
    "me": false
   },
   {
@@ -23,8 +23,8 @@
    "t": true,
    "n": true,
    "i": false,
-   "what": "outline logo, no coin",
-   "short": "outline logo",
+   "what": "wrong logo",
+   "short": "wrong",
    "me": false
   },
   {
@@ -36,8 +36,8 @@
    "t": true,
    "n": true,
    "i": false,
-   "what": "grey metal render",
-   "short": "grey render",
+   "what": "wrong logo",
+   "short": "wrong",
    "me": false
   },
   {
@@ -49,8 +49,8 @@
    "t": false,
    "n": false,
    "i": true,
-   "what": "right coin, wrong ticker",
-   "short": "the coin",
+   "what": "right logo, wrong ticker",
+   "short": "correct",
    "me": false
   },
   {
@@ -62,8 +62,8 @@
    "t": true,
    "n": true,
    "i": false,
-   "what": "outline logo in a ring",
-   "short": "ring logo",
+   "what": "wrong logo",
+   "short": "wrong",
    "me": false
   },
   {
@@ -75,8 +75,8 @@
    "t": true,
    "n": true,
    "i": false,
-   "what": "outline logo in a ring",
-   "short": "ring logo",
+   "what": "wrong logo",
+   "short": "wrong",
    "me": false
   },
   {
@@ -88,8 +88,8 @@
    "t": true,
    "n": true,
    "i": false,
-   "what": "outline logo, no coin",
-   "short": "outline logo",
+   "what": "wrong logo",
+   "short": "wrong",
    "me": false
   },
   {
@@ -102,7 +102,7 @@
    "n": true,
    "i": true,
    "what": "",
-   "short": "the coin",
+   "short": "correct",
    "me": true
   }
  ],

@@ -6,7 +6,7 @@ const list = JSON.parse(fs.readFileSync(path.join(DIR, 'tokens.json'), 'utf8')),
 const OURS = '6GTDzJNqDfJ7v4kpmbs4aupxQZnVwgRqTD4WFU7fpump', OUR_TIME = Date.UTC(2026, 10, 18, 15, 59, 45); // pump.fun pair creation, matches the mint
 const tok = (p) => list.find((e) => e.a.startsWith(p)), time = (e) => (T[e.a] && T[e.a].reached && T[e.a].time) || (e.a === OURS ? OUR_TIME : e.created);
 // [prefix, what the image is, short label]
-const PRE = [['9hjBLB', 'outline logo, no coin', 'outline logo'], ['BQLQT9', 'grey metal render', 'grey render'], ['ZAdX9J', 'right coin, wrong ticker', 'the coin'], ['GgyKtb', 'outline logo in a ring', 'ring logo'], ['2oK1Ky', 'outline logo in a ring', 'ring logo'], ['Gakss2', 'outline logo, wrong name', 'outline logo'], ['HWeKyu', 'outline logo, no coin', 'outline logo'], ['6GTDzJ', '', 'the coin']];
+const PRE = [['9hjBLB', 'wrong logo', 'wrong'], ['BQLQT9', 'wrong logo', 'wrong'], ['ZAdX9J', 'right logo, wrong ticker', 'correct'], ['GgyKtb', 'wrong logo', 'wrong'], ['2oK1Ky', 'wrong logo', 'wrong'], ['Gakss2', 'wrong logo', 'wrong'], ['HWeKyu', 'wrong logo', 'wrong'], ['6GTDzJ', '', 'correct']];
 const rows = PRE.map(([p, what, short]) => { const e = tok(p), ticker = (e.csym || e.sym).trim(), name = (e.cname || e.name).trim(), me = e.a === OURS;
   return { a: e.a, time: time(e), ticker, name, img: 'others/' + p + '.png', t: ticker === 'DCTY', n: name === 'DacityCoin', i: me || p === 'ZAdX9J', what, short, me }; }).sort((a, b) => a.time - b.time);
 const mine = rows.find((r) => r.me), late = (ms) => { const s = Math.round(ms / 1000); return s < 120 ? s + ' sec' : Math.round(s / 60) + ' min'; };
