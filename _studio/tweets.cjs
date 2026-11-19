@@ -4,9 +4,9 @@ const fs = require('fs'), path = require('path');
 // fill SITE in when the domain exists (no https://), then re-run: every tweet gets its link, deep-linked to the section it is about
 const SITE = 'dctygta6.com', CA = '6GTDzJNqDfJ7v4kpmbs4aupxQZnVwgRqTD4WFU7fpump';
 const len = (s) => [...s].length, NL = String.fromCharCode(10), link = (hash) => (SITE ? NL + NL + 'https://' + SITE + (hash || '') : '');
-const NAME = 'DCTY | the right coin';
-const BIO = 'Two DacityCoins share one name and one ticker. Only one was minted with the coin. Community takeover. $DCTY';
-const DESC = 'DCTY is the DacityCoin minted with the coin itself as its image. Another DacityCoin with the same name and ticker was minted with only the logo, and because both tokens have no update authority, neither picture can ever be changed. This is a community takeover of the one that got it right. Check the address before you buy: it starts with 6GTD.';
+const NAME = 'DCTY | the first with all three';
+const BIO = "The first DacityCoin minted with the right ticker, name and image. 18 Nov 2026, 15:59:45 UTC. Check the timestamps. Community takeover. $DCTY dctygta6.com";
+const DESC = "DCTY is the first DacityCoin minted with the right ticker, the right name and the right image: 18 November 2026 at 15:59:45 UTC, recorded on Solana. 36 Dacity coins were minted before it, and every one has the wrong ticker, the wrong name or the wrong image, including the largest one, which carries an outline logo instead of the coin. Neither token has an update authority, so no image can ever be changed. This is a community takeover of the one that got it right. The full mint-order timeline with every address is at dctygta6.com. Check the address before you buy: it starts with 6GTD.";
 // [title, media, section, text]. Market caps: DexScreener, 19 Nov 2026.
 const T = [
   ['Pinned', 'dcty-g07-timeline.png', '#first', `36 Dacity coins were minted before this one.
