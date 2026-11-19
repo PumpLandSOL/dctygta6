@@ -5,83 +5,64 @@ const fs = require('fs'), path = require('path');
 const SITE = 'dctygta6.com', CA = '6GTDzJNqDfJ7v4kpmbs4aupxQZnVwgRqTD4WFU7fpump';
 const len = (s) => [...s].length, NL = String.fromCharCode(10), link = (hash) => (SITE ? NL + NL + 'https://' + SITE + (hash || '') : '');
 const NAME = 'DCTY | the first with all three';
-const BIO = "The first DacityCoin minted with the right ticker, name and image. 18 Nov 2026, 15:59:45 UTC. Check the timestamps. Community takeover. $DCTY dctygta6.com";
+const BIO = "The first $DCTY with the correct logo and ticker. Minted 18 Nov 2026, 15:59:45 UTC. The runner has the wrong logo. Community takeover. dctygta6.com";
 const DESC = "DCTY is the first DacityCoin minted with the right ticker, the right name and the right image: 18 November 2026 at 15:59:45 UTC, recorded on Solana. 36 Dacity coins were minted before it, and every one has the wrong ticker, the wrong name or the wrong image, including the largest one, which carries an outline logo instead of the coin. Neither token has an update authority, so no image can ever be changed. This is a community takeover of the one that got it right. The full mint-order timeline with every address is at dctygta6.com. Check the address before you buy: it starts with 6GTD.";
 // [title, media, section, text]. Market caps: DexScreener, 19 Nov 2026.
 const T = [
-  ['Pinned', 'dcty-g07-timeline.png', '#first', `36 Dacity coins were minted before this one.
+  ['Pinned', 'dcty-g07-timeline.png', '#first', `This is the first $DCTY with the correct logo and ticker.
 
-Wrong ticker, wrong name or wrong image. Every one of them.
+The $10M runner has the wrong logo.
 
-18 Nov, 15:59:45 UTC: the first DacityCoin with all three right.
+Minted 18 Nov, 15:59:45 UTC. It's on-chain.`],
+  ['Receipts', 'dcty-g08-matrix.png', '#first', `Every $DCTY minted before this one, with its timestamp.
 
-$DCTY`],
-  ['Receipts by timestamp', 'dcty-g08-matrix.png', '#first', `Ticker. Name. Image.
+Each has the wrong logo or the wrong ticker.
 
-Seven earlier coins, each with its mint time straight from Solana. Each one misses at least one.
+This is the first with both correct.`],
+  ['First', 'dcty-g09-first.png', '#first', `18 Nov 2026, 15:59:45 UTC.
 
-Row eight doesn't.
+The first $DCTY with the correct logo and ticker was minted.
 
-$DCTY`],
-  ['First', 'dcty-g09-first.png', '#first', `18 November 2026, 15:59:45 UTC.
+That timestamp is on Solana. Nobody can change it.`],
+  ['Copies', 'dcty-g10-copies.png', '#first', `28 seconds after this $DCTY was minted, a copy appeared with the same logo.
 
-That is the block where the first DacityCoin with the right ticker, name and image was minted.
+8 minutes later, another one.
 
-You can't backdate a block.
-
-$DCTY`],
-  ['Copies', 'dcty-g10-copies.png', '#first', `28 seconds after the mint, the first copy showed up with the same image.
-
-8 minutes later, another.
-
-Copies only copy the one that got it right.
-
-$DCTY`],
+They copied the first one that got it right.`],
   ['Spot the difference', 'dcty-g01-spot.png', '#spot', `Spot the difference.
 
-Two DacityCoins. Same name. Same ticker.
-One was minted with the coin. One was minted with a logo.
+Left: the correct $DCTY logo.
+Right: the logo on the $10M runner.
 
-The logo is at a $14.9M market cap.
-The coin is at $15K.
+Same ticker. Wrong logo on the big one.`],
+  ['The address', 'dcty-g05-address.png', '#buy', `Two coins use the $DCTY ticker. Only one has the correct logo.
 
-$DCTY`],
-  ['The address', 'dcty-g05-address.png', '#buy', `Two coins trade as $DCTY, so the ticker tells you nothing.
-
-The right one starts with 6GTD:
+It starts with 6GTD:
 
 ${CA}`],
-  ['Receipts', 'dcty-g02-table.png', '#spot', `Name: identical.
-Ticker: identical.
-Image: one is the coin, one is not.
+  ['Same ticker', 'dcty-g02-table.png', '#spot', `Same name. Same ticker.
 
-That single row is the whole trade.
+One has the correct logo. The $10M runner doesn't.
 
 $DCTY`],
-  ['The gap', 'dcty-g03-gap.png', '#spot', `977x.
+  ['The gap', 'dcty-g03-gap.png', '#spot', `The $DCTY with the wrong logo: $10M market cap.
 
-That is how far the market cap of the wrong picture sits above the market cap of the right coin today.
+The $DCTY with the correct logo: $16K market cap.`],
+  ['Forever', 'dcty-g04-forever.png', '', `A coin's logo can't be changed after it's minted.
 
-Same name. Same ticker. 977x apart.
+The $10M runner has the wrong $DCTY logo forever.
 
-$DCTY`],
-  ['Forever', 'dcty-g04-forever.png', '', `Neither DacityCoin has an update authority. The pictures are locked for good.
+This one was minted with the correct one.`],
+  ['Key art', 'dcty-g06-keyart.png', '', `The first $DCTY with the correct logo and ticker.`],
+  ['Takeover', 'dcty-banner.png', '#buy', `$DCTY is a community takeover.
 
-So the $14.9M one keeps the wrong image forever. The one minted right stays right.
+The first one with the correct logo and ticker. The runner has the wrong logo.
 
-$DCTY`],
-  ['Key art', 'dcty-g06-keyart.png', '', `Only one has the coin.
-
-$DCTY`],
-  ['Takeover', 'dcty-banner.png', '#buy', `Nobody owns this one. The community took it over because it is the DacityCoin that was minted right.
-
-Site is up. Receipts are on it. The address is on it.
-
-$DCTY`],
+Timestamps and the address are on the site.`],
 ];
 let bad = 0, out = `# DCTY X kit${NL}${NL}Display name:${NL}${NL}\`\`\`${NL}${NAME}${NL}\`\`\`${NL}${NL}Bio (${len(BIO)}):${NL}${NL}\`\`\`${NL}${BIO}${NL}\`\`\`${NL}${NL}pump.fun / DexScreener description:${NL}${NL}\`\`\`${NL}${DESC}${NL}\`\`\`${NL}`;
 const seen = new Set();
-for (const [title, media, hash, text] of T) { const full = text.replace(/(\n\n\$DCTY)?$/, (m) => link(hash) + (m || '')), n = len(full), reserve = SITE ? 0 : 40; const ok = n + reserve <= 245 && !seen.has(media) && fs.existsSync(path.join(__dirname, '..', 'brand', media)); seen.add(media); if (!ok) bad++;
+for (const [title, media, hash, text] of T) { const full = text + link(hash), n = len(full), reserve = SITE ? 0 : 40; const ok = n + reserve <= 245 && !seen.has(media) && fs.existsSync(path.join(__dirname, '..', 'brand', media)); seen.add(media); if (!ok) bad++;
   console.log((ok ? 'ok   ' : 'BAD  ') + String(n).padStart(3) + '  ' + title); out += `${NL}## ${title} (${n} chars) · ${media}${NL}${NL}\`\`\`${NL}${full}${NL}\`\`\`${NL}`; }
 if (len(BIO) > 160) { console.log('BAD  bio ' + len(BIO)); bad++; }
 fs.writeFileSync(path.join(__dirname, '..', 'brand', 'X-KIT.md'), out); console.log(bad ? bad + ' problem(s)' : 'all ok, wrote brand/X-KIT.md'); process.exit(bad ? 1 : 0);

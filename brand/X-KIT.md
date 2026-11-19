@@ -6,10 +6,10 @@ Display name:
 DCTY | the first with all three
 ```
 
-Bio (154):
+Bio (147):
 
 ```
-The first DacityCoin minted with the right ticker, name and image. 18 Nov 2026, 15:59:45 UTC. Check the timestamps. Community takeover. $DCTY dctygta6.com
+The first $DCTY with the correct logo and ticker. Minted 18 Nov 2026, 15:59:45 UTC. The runner has the wrong logo. Community takeover. dctygta6.com
 ```
 
 pump.fun / DexScreener description:
@@ -18,148 +18,129 @@ pump.fun / DexScreener description:
 DCTY is the first DacityCoin minted with the right ticker, the right name and the right image: 18 November 2026 at 15:59:45 UTC, recorded on Solana. 36 Dacity coins were minted before it, and every one has the wrong ticker, the wrong name or the wrong image, including the largest one, which carries an outline logo instead of the coin. Neither token has an update authority, so no image can ever be changed. This is a community takeover of the one that got it right. The full mint-order timeline with every address is at dctygta6.com. Check the address before you buy: it starts with 6GTD.
 ```
 
-## Pinned (206 chars) · dcty-g07-timeline.png
+## Pinned (167 chars) · dcty-g07-timeline.png
 
 ```
-36 Dacity coins were minted before this one.
+This is the first $DCTY with the correct logo and ticker.
 
-Wrong ticker, wrong name or wrong image. Every one of them.
+The $10M runner has the wrong logo.
 
-18 Nov, 15:59:45 UTC: the first DacityCoin with all three right.
+Minted 18 Nov, 15:59:45 UTC. It's on-chain.
 
 https://dctygta6.com#first
-
-$DCTY
 ```
 
-## Receipts by timestamp (173 chars) · dcty-g08-matrix.png
+## Receipts (167 chars) · dcty-g08-matrix.png
 
 ```
-Ticker. Name. Image.
+Every $DCTY minted before this one, with its timestamp.
 
-Seven earlier coins, each with its mint time straight from Solana. Each one misses at least one.
+Each has the wrong logo or the wrong ticker.
 
-Row eight doesn't.
+This is the first with both correct.
 
 https://dctygta6.com#first
-
-$DCTY
 ```
 
-## First (191 chars) · dcty-g09-first.png
+## First (168 chars) · dcty-g09-first.png
 
 ```
-18 November 2026, 15:59:45 UTC.
+18 Nov 2026, 15:59:45 UTC.
 
-That is the block where the first DacityCoin with the right ticker, name and image was minted.
+The first $DCTY with the correct logo and ticker was minted.
 
-You can't backdate a block.
+That timestamp is on Solana. Nobody can change it.
 
 https://dctygta6.com#first
-
-$DCTY
 ```
 
-## Copies (179 chars) · dcty-g10-copies.png
+## Copies (180 chars) · dcty-g10-copies.png
 
 ```
-28 seconds after the mint, the first copy showed up with the same image.
+28 seconds after this $DCTY was minted, a copy appeared with the same logo.
 
-8 minutes later, another.
+8 minutes later, another one.
 
-Copies only copy the one that got it right.
+They copied the first one that got it right.
 
 https://dctygta6.com#first
-
-$DCTY
 ```
 
-## Spot the difference (212 chars) · dcty-g01-spot.png
+## Spot the difference (155 chars) · dcty-g01-spot.png
 
 ```
 Spot the difference.
 
-Two DacityCoins. Same name. Same ticker.
-One was minted with the coin. One was minted with a logo.
+Left: the correct $DCTY logo.
+Right: the logo on the $10M runner.
 
-The logo is at a $14.9M market cap.
-The coin is at $15K.
+Same ticker. Wrong logo on the big one.
 
 https://dctygta6.com#spot
-
-$DCTY
 ```
 
-## The address (163 chars) · dcty-g05-address.png
+## The address (156 chars) · dcty-g05-address.png
 
 ```
-Two coins trade as $DCTY, so the ticker tells you nothing.
+Two coins use the $DCTY ticker. Only one has the correct logo.
 
-The right one starts with 6GTD:
+It starts with 6GTD:
 
 6GTDzJNqDfJ7v4kpmbs4aupxQZnVwgRqTD4WFU7fpump
 
 https://dctygta6.com#buy
 ```
 
-## Receipts (142 chars) · dcty-g02-table.png
+## Same ticker (109 chars) · dcty-g02-table.png
 
 ```
-Name: identical.
-Ticker: identical.
-Image: one is the coin, one is not.
+Same name. Same ticker.
 
-That single row is the whole trade.
+One has the correct logo. The $10M runner doesn't.
+
+$DCTY
 
 https://dctygta6.com#spot
-
-$DCTY
 ```
 
-## The gap (180 chars) · dcty-g03-gap.png
+## The gap (125 chars) · dcty-g03-gap.png
 
 ```
-977x.
+The $DCTY with the wrong logo: $10M market cap.
 
-That is how far the market cap of the wrong picture sits above the market cap of the right coin today.
-
-Same name. Same ticker. 977x apart.
+The $DCTY with the correct logo: $16K market cap.
 
 https://dctygta6.com#spot
-
-$DCTY
 ```
 
-## Forever (190 chars) · dcty-g04-forever.png
+## Forever (165 chars) · dcty-g04-forever.png
 
 ```
-Neither DacityCoin has an update authority. The pictures are locked for good.
+A coin's logo can't be changed after it's minted.
 
-So the $14.9M one keeps the wrong image forever. The one minted right stays right.
+The $10M runner has the wrong $DCTY logo forever.
+
+This one was minted with the correct one.
 
 https://dctygta6.com
-
-$DCTY
 ```
 
-## Key art (51 chars) · dcty-g06-keyart.png
+## Key art (71 chars) · dcty-g06-keyart.png
 
 ```
-Only one has the coin.
+The first $DCTY with the correct logo and ticker.
 
 https://dctygta6.com
-
-$DCTY
 ```
 
-## Takeover (188 chars) · dcty-banner.png
+## Takeover (181 chars) · dcty-banner.png
 
 ```
-Nobody owns this one. The community took it over because it is the DacityCoin that was minted right.
+$DCTY is a community takeover.
 
-Site is up. Receipts are on it. The address is on it.
+The first one with the correct logo and ticker. The runner has the wrong logo.
+
+Timestamps and the address are on the site.
 
 https://dctygta6.com#buy
-
-$DCTY
 ```
