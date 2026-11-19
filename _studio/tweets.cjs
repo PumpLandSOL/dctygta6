@@ -30,9 +30,9 @@ That is the block where the first DacityCoin with the right ticker, name and ima
 You can't backdate a block.
 
 $DCTY`],
-  ['Copies', 'dcty-g10-copies.png', '#first', `66 seconds after the mint, the first copy showed up with the same image.
+  ['Copies', 'dcty-g10-copies.png', '#first', `28 seconds after the mint, the first copy showed up with the same image.
 
-15 minutes later, another.
+8 minutes later, another.
 
 Copies only copy the one that got it right.
 

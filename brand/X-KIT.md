@@ -60,12 +60,12 @@ https://dctygta6.com#first
 $DCTY
 ```
 
-## Copies (180 chars) · dcty-g10-copies.png
+## Copies (179 chars) · dcty-g10-copies.png
 
 ```
-66 seconds after the mint, the first copy showed up with the same image.
+28 seconds after the mint, the first copy showed up with the same image.
 
-15 minutes later, another.
+8 minutes later, another.
 
 Copies only copy the one that got it right.
 

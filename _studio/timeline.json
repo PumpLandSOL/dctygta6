@@ -2,6 +2,19 @@
  "before": 36,
  "rows": [
   {
+   "a": "Gakss2WZ9DMrEGQZRLHut4RBKVG3AxeXNg17kJKtpump",
+   "time": 1792441431000,
+   "ticker": "DCTY",
+   "name": "Dacity Coin",
+   "img": "others/Gakss2.png",
+   "t": true,
+   "n": false,
+   "i": false,
+   "what": "outline logo, wrong name",
+   "short": "outline logo",
+   "me": false
+  },
+  {
    "a": "9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump",
    "time": 1792465409000,
    "ticker": "DCTY",
@@ -67,19 +80,6 @@
    "me": false
   },
   {
-   "a": "Gakss2WZ9DMrEGQZRLHut4RBKVG3AxeXNg17kJKtpump",
-   "time": 1795017256000,
-   "ticker": "DCTY",
-   "name": "Dacity Coin",
-   "img": "others/Gakss2.png",
-   "t": true,
-   "n": false,
-   "i": false,
-   "what": "outline logo, wrong name",
-   "short": "outline logo",
-   "me": false
-  },
-  {
    "a": "HWeKyuwNNmqkFm94Fd9uBFdyFdgnQi7ksc1emgzUpump",
    "time": 1795017496000,
    "ticker": "DCTY",
@@ -109,25 +109,25 @@
  "after": [
   {
    "a": "Fjoubg2YKS1qfc4sxRQaEH3odaCXQjGVizcDgW2Ppump",
-   "time": 1795017651000,
+   "time": 1795017613000,
    "ticker": "DCTY",
    "name": "DacityCoin",
    "img": "others/Fjoubg.png",
    "t": true,
    "n": true,
    "i": true,
-   "late": "66 sec"
+   "late": "28 sec"
   },
   {
    "a": "5qErNMKHiYvixh69V1aw8Dazzg6bvUN41ojcozUppump",
-   "time": 1795018497000,
+   "time": 1795018074000,
    "ticker": "DCTY",
    "name": "DacityCoin",
    "img": "others/5qErNM.png",
    "t": true,
    "n": true,
    "i": true,
-   "late": "15 min"
+   "late": "8 min"
   }
  ],
  "checked": "2026-11-19"
