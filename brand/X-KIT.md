@@ -130,12 +130,12 @@ https://dctygta6.com#spot
 $DCTY
 ```
 
-## Forever (194 chars) · dcty-g04-forever.png
+## Forever (190 chars) · dcty-g04-forever.png
 
 ```
 Neither DacityCoin has an update authority. The pictures are locked for good.
 
-So the $14.9M one keeps the wrong image forever, and the right image only exists here.
+So the $14.9M one keeps the wrong image forever. The one minted right stays right.
 
 https://dctygta6.com
 

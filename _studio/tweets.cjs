@@ -67,7 +67,7 @@ Same name. Same ticker. 977x apart.
 $DCTY`],
   ['Forever', 'dcty-g04-forever.png', '', `Neither DacityCoin has an update authority. The pictures are locked for good.
 
-So the $14.9M one keeps the wrong image forever, and the right image only exists here.
+So the $14.9M one keeps the wrong image forever. The one minted right stays right.
 
 $DCTY`],
   ['Key art', 'dcty-g06-keyart.png', '', `Only one has the coin.
