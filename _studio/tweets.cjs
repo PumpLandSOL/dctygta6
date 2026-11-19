@@ -2,7 +2,7 @@
 'use strict';
 const fs = require('fs'), path = require('path');
 // fill SITE in when the domain exists (no https://), then re-run: every tweet gets its link, deep-linked to the section it is about
-const SITE = '', CA = '6GTDzJNqDfJ7v4kpmbs4aupxQZnVwgRqTD4WFU7fpump';
+const SITE = 'dctygta6.xyz', CA = '6GTDzJNqDfJ7v4kpmbs4aupxQZnVwgRqTD4WFU7fpump';
 const len = (s) => [...s].length, NL = String.fromCharCode(10), link = (hash) => (SITE ? NL + NL + 'https://' + SITE + (hash || '') : '');
 const NAME = 'DCTY | the right coin';
 const BIO = 'Two DacityCoins share one name and one ticker. Only one was minted with the coin. Community takeover. $DCTY';
