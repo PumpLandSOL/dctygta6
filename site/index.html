@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DCTY · the right coin</title>
+<meta name="description" content="Two DacityCoins share one name and one ticker. Only one was minted with the coin itself. This is that one.">
+<meta property="og:title" content="DCTY · the right coin"><meta property="og:description" content="Same name. Same ticker. Only one has the coin."><meta property="og:image" content="og-share.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="coin.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#190d2b;--ink2:#221238;--pink:#f2479d;--hot:#ff1f8f;--pale:#ffd4ea;--tx:#fff3fa;--dim:#b79dc9;--line:rgba(242,71,157,.26);--ok:#7dffb8;--no:#ff5a6e;--disp:'Unbounded',sans-serif;--mono:'DM Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--tx);font:400 16px/1.6 Inter,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;mix-blend-mode:normal}
+.logo{display:flex;align-items:center;gap:10px;font:800 15px var(--disp);letter-spacing:.04em}.logo img{width:30px;height:30px;border-radius:50%}
+.top{display:flex;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;border:1.5px solid var(--line);font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;background:rgba(25,13,43,.6);backdrop-filter:blur(8px);transition:.2s}
+.btn:hover{border-color:var(--pink);transform:translateY(-1px)}.btn.go{background:var(--pink);color:var(--ink);border-color:var(--pink);font-weight:500}.btn.go:hover{background:#fff;border-color:#fff}
+.btn[hidden]{display:none}
+
+/* hero: the coin is the page */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;padding:110px 20px 150px}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(60% 55% at 50% 46%,rgba(242,71,157,.34),transparent 70%),repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 4px)}
+.word{position:absolute;left:50%;top:50%;transform:translate(-50%,-56%);font:900 clamp(120px,31vw,470px)/.8 var(--disp);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.5px rgba(242,71,157,.3);white-space:nowrap;user-select:none;pointer-events:none}
+.stage{position:relative;width:min(62vw,440px);aspect-ratio:1;perspective:1400px;z-index:2}
+.coin{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.coin i{position:absolute;inset:0;border-radius:50%;background:#c22b78}
+.coin .face{background:#f2479d url(coin.png) center/101% no-repeat;box-shadow:inset 0 0 0 5px rgba(255,255,255,.14),inset 0 0 60px rgba(120,10,70,.35)}
+.coin .back{transform:rotateY(180deg) translateZ(17px)}.coin .front{transform:translateZ(17px)}
+.shadow{position:absolute;left:10%;right:10%;bottom:-13%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.6),transparent);filter:blur(6px)}
+.claim{position:absolute;left:0;right:0;bottom:34px;z-index:3;text-align:center;padding:0 20px}
+.claim h1{font:800 clamp(22px,4.2vw,44px)/1.05 var(--disp);letter-spacing:-.02em}.claim h1 em{font-style:normal;color:var(--pink)}
+.claim p{font:400 12px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-top:12px}
+.tagL,.tagR{position:absolute;top:50%;z-index:3;font:400 11px/1.9 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}.tagL{left:24px}.tagR{right:24px;text-align:right}.tagL b,.tagR b{display:block;color:var(--tx);font:600 20px var(--disp);letter-spacing:0}
+
+section{padding:96px 0}
+.kick{font:400 12px var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--pink);margin-bottom:16px}
+h2{font:800 clamp(30px,5.4vw,64px)/1 var(--disp);letter-spacing:-.03em}h2 em{font-style:normal;color:var(--pink)}
+.lead{color:var(--dim);max-width:620px;margin-top:18px;font-size:17px}
+
+/* spot the difference */
+.spot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;margin-top:44px}
+.cmp{position:relative;aspect-ratio:1;border-radius:22px;overflow:hidden;border:1.5px solid var(--line);user-select:none;touch-action:none;cursor:ew-resize;background:#000}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cmp .a{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.cmp .bar{position:absolute;top:0;bottom:0;left:var(--p);width:3px;background:#fff;transform:translateX(-50%)}.cmp .bar:after{content:"◂ ▸";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:var(--ink);font:500 13px var(--mono);padding:9px 11px;border-radius:999px;white-space:nowrap}
+.cmp .lab{position:absolute;top:14px;font:500 11px var(--mono);letter-spacing:.14em;padding:7px 11px;border-radius:999px;background:rgba(10,4,20,.82)}.cmp .l1{left:14px;color:var(--ok)}.cmp .l2{right:14px;color:var(--no)}
+table{width:100%;border-collapse:collapse;font:400 14px var(--mono)}th,td{text-align:left;padding:15px 10px;border-bottom:1px solid var(--line)}th{font-weight:400;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+td:first-child{color:var(--dim);font-size:12px;letter-spacing:.12em;text-transform:uppercase}td.y{color:var(--ok)}td.n{color:var(--no)}td b{font:600 17px var(--disp);color:var(--tx)}
+.gap{margin-top:26px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}.gap b{font:900 clamp(44px,8vw,92px)/1 var(--disp);color:var(--pink);letter-spacing:-.04em}.gap span{font:400 12px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);max-width:260px}
+
+/* three facts */
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:44px}
+.fact{background:var(--ink2);padding:30px 26px}.fact s{display:block;text-decoration:none;font:900 54px/1 var(--disp);color:var(--pink);margin-bottom:22px}.fact h3{font:600 19px/1.2 var(--disp)}.fact p{color:var(--dim);margin-top:10px;font-size:15px}
+
+/* the address */
+.ca{margin-top:40px;border:1.5px solid var(--pink);border-radius:22px;padding:26px;background:linear-gradient(120deg,rgba(242,71,157,.16),transparent 60%)}
+.ca small{font:400 11px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--pink)}
+.ca code{display:block;font:500 clamp(13px,2.5vw,24px) var(--mono);margin:12px 0 20px;word-break:break-all}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.other{margin-top:16px;font:400 12px var(--mono);color:var(--dim);word-break:break-all}.other b{color:var(--no);font-weight:500}
+footer{border-top:1px solid var(--line);padding:30px 0 50px;font:400 12px/1.9 var(--mono);color:var(--dim)}footer a{color:var(--pale);border-bottom:1px solid var(--line)}
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);opacity:0;background:#fff;color:var(--ink);font:500 12px var(--mono);letter-spacing:.1em;padding:11px 16px;border-radius:999px;transition:.25s;z-index:50}#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:860px){.spot{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.tagL,.tagR{display:none}section{padding:70px 0}.top .hide{display:none}.stage{width:min(74vw,440px)}}
+@media(prefers-reduced-motion:reduce){.coin{animation:none!important}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="#top"><img src="coin.png" alt="">DCTY</a><div class="top"><a class="btn hide" href="#spot">Spot the difference</a><a class="btn hide" id="x-top" hidden target="_blank" rel="noopener">X</a><a class="btn go" id="buy-top" target="_blank" rel="noopener">Buy DCTY</a></div></header>
+
+<main id="top" class="hero">
+  <div class="word" aria-hidden="true">DCTY</div>
+  <div class="tagL"><span>Market cap</span><b id="mc-og">…</b><span>the right coin</span></div>
+  <div class="tagR"><span>Market cap</span><b id="mc-run">…</b><span>the wrong picture</span></div>
+  <div class="stage" id="stage"><div class="coin" id="coin"></div><div class="shadow"></div></div>
+  <div class="claim"><h1>Same name. Same ticker.<br><em>Only one has the coin.</em></h1><p>DacityCoin · $DCTY · community takeover</p></div>
+</main>
+
+<section id="spot"><div class="wrap">
+  <div class="kick">Spot the difference</div><h2>Two DacityCoins.<br><em>One face is wrong.</em></h2>
+  <p class="lead">Both are called DacityCoin. Both trade as DCTY. Drag the bar: one was minted with the coin, the other with a logo on a black square.</p>
+  <div class="spot">
+    <div class="cmp" id="cmp" style="--p:50%"><img class="b" src="runner.png" alt="The image the larger DCTY was minted with: a pink outline logo on black"><img class="a" src="og.png" alt="The image this DCTY was minted with: the pink coin"><div class="bar"></div><span class="lab l1">✓ THIS DCTY</span><span class="lab l2">✗ THE RUNNER</span></div>
+    <div>
+      <table><thead><tr><th></th><th>This DCTY</th><th>The runner</th></tr></thead><tbody>
+        <tr><td>Name</td><td>DacityCoin</td><td>DacityCoin</td></tr>
+        <tr><td>Ticker</td><td>DCTY</td><td>DCTY</td></tr>
+        <tr><td>Image</td><td class="y">✓ the coin</td><td class="n">✗ logo only</td></tr>
+        <tr><td>Can it be changed</td><td>No</td><td class="n">No</td></tr>
+        <tr><td>Market cap</td><td><b id="t-og">…</b></td><td><b id="t-run">…</b></td></tr>
+      </tbody></table>
+      <div class="gap"><b id="gap">…</b><span>the distance between the right coin and the wrong one, by market cap</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kick">The case</div><h2>A coin's image<br><em>is forever.</em></h2>
+  <div class="facts">
+    <div class="fact"><s>01</s><h3>The picture is locked</h3><p>Both tokens have their update authority set to none. Nobody can swap the image on either one, ever. Check it on Solscan.</p></div>
+    <div class="fact"><s>02</s><h3>The runner ran with the wrong one</h3><p>It was minted with the outline logo. Millions in market cap, and its picture is still not the coin.</p></div>
+    <div class="fact"><s>03</s><h3>This is the first one with the coin</h3><p>Minted 18 November 2026 with the pink coin as its image. The community took it over and runs it now.</p></div>
+  </div>
+</div></section>
+
+<section id="buy"><div class="wrap">
+  <div class="kick">The address</div><h2>Check the last<br><em>four letters.</em></h2>
+  <p class="lead">Two coins share the ticker, so the address is the only thing that tells them apart. The right coin ends in <b style="color:var(--tx)">fpump</b> and starts with <b style="color:var(--tx)">6GTD</b>.</p>
+  <div class="ca"><small>✓ DCTY · the right coin</small><code id="ca"></code><div class="row"><button class="btn go" id="copy">Copy address</button><a class="btn" id="l-pump" target="_blank" rel="noopener">pump.fun</a><a class="btn" id="l-dex" target="_blank" rel="noopener">DexScreener</a><a class="btn" id="l-scan" target="_blank" rel="noopener">Solscan</a><a class="btn" id="l-x" hidden target="_blank" rel="noopener">X</a><a class="btn" id="l-tg" hidden target="_blank" rel="noopener">Telegram</a></div></div>
+  <p class="other"><b>✗ not this one:</b> <span id="ca-run"></span></p>
+</div></section>
+
+<footer><div class="wrap">DCTY is a community takeover of the first DacityCoin minted with the coin as its image. Market caps on this page are read live from DexScreener. <a id="src" target="_blank" rel="noopener">The post that spotted it</a><br>A fan-run community coin. Not affiliated with or endorsed by Rockstar Games or Take-Two Interactive.</div></footer>
+<div id="toast">Copied</div>
+
+<script src="config.js"></script>
+<script>
+(() => {
+  const C = window.DCTY, $ = (s) => document.querySelector(s);
+  // the coin: two faces and a stack of discs for the edge
+  const coin = $('#coin'), T = 34; let html = '';
+  for (let i = 0; i <= T; i += 2) html += `<i style="transform:translateZ(${i - T / 2}px);background:${i % 4 ? '#c22b78' : '#a91f66'}"></i>`;
+  coin.innerHTML = html + '<i class="face front"></i><i class="face back"></i>';
+  let rx = 0, ry = 0, tx = 0, ty = 0, spin = 0, last = performance.now(); const still = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  addEventListener('pointermove', (e) => { tx = (e.clientY / innerHeight - .5) * -26; ty = (e.clientX / innerWidth - .5) * 40; });
+  const frame = (now) => { const dt = Math.min(50, now - last); last = now; if (!still) spin += dt * .03; rx += (tx - rx) * .06; ry += (ty - ry) * .06; coin.style.transform = `rotateX(${rx}deg) rotateY(${spin + ry}deg)`; requestAnimationFrame(frame); }; requestAnimationFrame(frame);
+
+  // links
+  const set = (id, url) => { const a = $(id); if (url) { a.href = url; a.hidden = false; } };
+  $('#ca').textContent = C.ca; $('#ca-run').textContent = C.runner;
+  set('#l-pump', 'https://pump.fun/coin/' + C.ca); set('#buy-top', 'https://pump.fun/coin/' + C.ca); set('#l-dex', 'https://dexscreener.com/solana/' + C.ca); set('#l-scan', 'https://solscan.io/token/' + C.ca); set('#src', C.source);
+  set('#l-x', C.x); set('#x-top', C.x); set('#l-tg', C.telegram);
+  const toast = (m) => { const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('on'), 2000); };
+  $('#copy').onclick = () => navigator.clipboard.writeText(C.ca).then(() => toast('Address copied'), () => toast('Copy failed'));
+
+  // the slider
+  const cmp = $('#cmp'), move = (e) => { const r = cmp.getBoundingClientRect(); cmp.style.setProperty('--p', Math.max(4, Math.min(96, ((e.clientX - r.left) / r.width) * 100)) + '%'); };
+  cmp.addEventListener('pointerdown', (e) => { cmp.setPointerCapture(e.pointerId); move(e); cmp.onpointermove = move; }); cmp.addEventListener('pointerup', () => (cmp.onpointermove = null));
+
+  // live market caps, straight from DexScreener
+  const money = (n) => (n >= 1e9 ? '$' + (n / 1e9).toFixed(2) + 'B' : n >= 1e6 ? '$' + (n / 1e6).toFixed(2) + 'M' : n >= 1e3 ? '$' + (n / 1e3).toFixed(1) + 'K' : '$' + Math.round(n));
+  const cap = async (m) => { const j = await (await fetch('https://api.dexscreener.com/latest/dex/tokens/' + m)).json(); const p = (j.pairs || []).filter((x) => x.baseToken && x.baseToken.address === m).sort((a, b) => ((b.liquidity || {}).usd || 0) - ((a.liquidity || {}).usd || 0))[0]; return p ? p.marketCap || p.fdv || 0 : 0; };
+  const live = async () => { try { const [a, b] = await Promise.all([cap(C.ca), cap(C.runner)]); if (a) { $('#mc-og').textContent = $('#t-og').textContent = money(a); } if (b) { $('#mc-run').textContent = $('#t-run').textContent = money(b); } if (a && b) $('#gap').textContent = Math.round(b / a).toLocaleString('en-US') + 'x'; } catch {} };
+  live(); setInterval(live, 30000);
+})();
+</script>
+</body>
+</html>
