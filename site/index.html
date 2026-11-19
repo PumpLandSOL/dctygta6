@@ -15,7 +15,11 @@
 body{background:var(--ink);color:var(--tx);font:400 16px/1.6 Inter,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;mix-blend-mode:normal}
+#cabar{position:fixed;inset:0 0 auto 0;z-index:21;height:40px;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 12px;background:var(--pink);color:var(--ink);font:500 13px var(--mono);cursor:pointer;width:100%}
+#cabar b{font-weight:500;letter-spacing:.14em;opacity:.7}#cabar span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}#cabar i{font-style:normal;flex:none;background:var(--ink);color:var(--pink);padding:4px 10px;border-radius:999px;font-size:11px;letter-spacing:.12em}
+#cabar:hover{background:#fff}
+@media(max-width:560px){#cabar{font-size:2.55vw;gap:6px;padding:0 8px}#cabar b{display:none}#cabar i{font-size:9px;padding:3px 7px}}
+header{position:fixed;inset:40px 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;mix-blend-mode:normal}
 .logo{display:flex;align-items:center;gap:10px;font:800 15px var(--disp);letter-spacing:.04em}.logo img{width:30px;height:30px;border-radius:50%}
 .top{display:flex;gap:8px;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;border:1.5px solid var(--line);font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;background:rgba(25,13,43,.6);backdrop-filter:blur(8px);transition:.2s}
@@ -74,6 +78,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;font:400 12px/1.9 va
 </style>
 </head>
 <body>
+<button id="cabar" aria-label="Copy the DCTY contract address"><b>CA</b><span id="ca-top"></span><i>COPY</i></button>
 <header><a class="logo" href="#top"><img src="coin.png" alt="">DCTY</a><div class="top"><a class="btn hide" href="#spot">Spot the difference</a><a class="btn hide" href="#first">Mint order</a><a class="btn hide" id="x-top" hidden target="_blank" rel="noopener">X</a><a class="btn go" id="buy-top" target="_blank" rel="noopener">Buy DCTY</a></div></header>
 
 <main id="top" class="hero">
@@ -148,6 +153,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;font:400 12px/1.9 va
   set('#l-pump', 'https://pump.fun/coin/' + C.ca); set('#buy-top', 'https://pump.fun/coin/' + C.ca); set('#l-dex', 'https://dexscreener.com/solana/' + C.ca); set('#l-scan', 'https://solscan.io/token/' + C.ca); set('#src', C.source);
   set('#l-x', C.x); set('#x-top', C.x); set('#l-tg', C.telegram);
   const toast = (m) => { const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('on'), 2000); };
+  $('#ca-top').textContent = C.ca; $('#cabar').onclick = () => navigator.clipboard.writeText(C.ca).then(() => toast('Address copied'), () => toast('Copy failed'));
   $('#copy').onclick = () => navigator.clipboard.writeText(C.ca).then(() => toast('Address copied'), () => toast('Copy failed'));
 
   // the slider
