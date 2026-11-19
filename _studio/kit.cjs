@@ -4,7 +4,7 @@ const fs = require('fs'), path = require('path'), { open } = require('./cdp.cjs'
 const ROOT = path.join(__dirname, '..'), OUT = path.join(ROOT, 'brand'), SRC = path.join(__dirname, 'kit'); fs.mkdirSync(OUT, { recursive: true }); fs.mkdirSync(SRC, { recursive: true });
 const url = (f) => 'file:///' + f.split(path.sep).join('/'), img = (n) => "'" + encodeURI(url(path.join(ROOT, 'site', n))) + "'";
 // fill these in when they exist, then re-run
-const SITE = 'dctygta6.com', X = '';
+const SITE = 'dctygta6.com', X = '@OGDCTY';
 const CA = '6GTDzJNqDfJ7v4kpmbs4aupxQZnVwgRqTD4WFU7fpump', RUN = '9hjBLBrc7WZW2H8UQvBAvG5WiTZotXUv2Bdcn4f4pump';
 // market caps: DexScreener, 19 Nov 2026
 const DATE = '19 NOV 2026', MC_OG = '$15.3K', MC_RUN = '$14.9M', GAP = '977x';
