@@ -54,11 +54,18 @@ The $10M runner has the wrong $DCTY logo forever.
 
 This one was minted with the correct one.`],
   ['Key art', 'dcty-g06-keyart.png', '', `The first $DCTY with the correct logo and ticker.`],
-  ['Takeover', 'dcty-banner.png', '#buy', `$DCTY is a community takeover.
+  ['Video', 'dcty-first-17s.mp4', '#first', `Every $DCTY, in the order it was deployed.
 
-The first one with the correct logo and ticker. The runner has the wrong logo.
+Wrong image. Wrong image. Wrong ticker. Wrong image.
 
-Timestamps and the address are on the site.`],
+Then 18 Nov, 15:59:45 UTC: the first one with the correct ticker and image.
+
+That's us.`],
+  ['Banner', 'dcty-banner.png', '#first', `The first deployed $DCTY with the correct ticker and image.
+
+Deployed 18 Nov 2026, 15:59:45 UTC. The timestamp is on Solana.
+
+The $10M runner has the wrong image.`],
 ];
 let bad = 0, out = `# DCTY X kit${NL}${NL}Display name:${NL}${NL}\`\`\`${NL}${NAME}${NL}\`\`\`${NL}${NL}Bio (${len(BIO)}):${NL}${NL}\`\`\`${NL}${BIO}${NL}\`\`\`${NL}${NL}pump.fun / DexScreener description:${NL}${NL}\`\`\`${NL}${DESC}${NL}\`\`\`${NL}`;
 const seen = new Set();

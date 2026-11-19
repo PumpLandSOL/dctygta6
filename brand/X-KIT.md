@@ -133,14 +133,28 @@ The first $DCTY with the correct logo and ticker.
 https://dctygta6.com
 ```
 
-## Takeover (181 chars) · dcty-banner.png
+## Video (213 chars) · dcty-first-17s.mp4
 
 ```
-$DCTY is a community takeover.
+Every $DCTY, in the order it was deployed.
 
-The first one with the correct logo and ticker. The runner has the wrong logo.
+Wrong image. Wrong image. Wrong ticker. Wrong image.
 
-Timestamps and the address are on the site.
+Then 18 Nov, 15:59:45 UTC: the first one with the correct ticker and image.
 
-https://dctygta6.com#buy
+That's us.
+
+https://dctygta6.com#first
+```
+
+## Banner (190 chars) · dcty-banner.png
+
+```
+The first deployed $DCTY with the correct ticker and image.
+
+Deployed 18 Nov 2026, 15:59:45 UTC. The timestamp is on Solana.
+
+The $10M runner has the wrong image.
+
+https://dctygta6.com#first
 ```
