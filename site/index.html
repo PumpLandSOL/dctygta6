@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#190d2b;--ink2:#221238;--pink:#f2479d;--hot:#ff1f8f;--pale:#ffd4ea;--tx:#fff3fa;--dim:#b79dc9;--line:rgba(242,71,157,.26);--ok:#7dffb8;--no:#ff5a6e;--disp:'Unbounded',sans-serif;--mono:'DM Mono',monospace}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}
 body{background:var(--ink);color:var(--tx);font:400 16px/1.6 Inter,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
@@ -51,7 +51,7 @@ h2{font:800 clamp(30px,5.4vw,64px)/1 var(--disp);letter-spacing:-.03em}h2 em{fon
 .cmp .lab{position:absolute;top:14px;font:500 11px var(--mono);letter-spacing:.14em;padding:7px 11px;border-radius:999px;background:rgba(10,4,20,.82)}.cmp .l1{left:14px;color:var(--ok)}.cmp .l2{right:14px;color:var(--no)}
 table{width:100%;border-collapse:collapse;font:400 14px var(--mono)}th,td{text-align:left;padding:15px 10px;border-bottom:1px solid var(--line)}th{font-weight:400;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
 td:first-child{color:var(--dim);font-size:12px;letter-spacing:.12em;text-transform:uppercase}td.y{color:var(--ok)}td.n{color:var(--no)}td b{font:600 17px var(--disp);color:var(--tx)}
-.gap{margin-top:26px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}.gap b{font:900 clamp(44px,8vw,92px)/1 var(--disp);color:var(--pink);letter-spacing:-.04em}.gap span{font:400 12px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);max-width:260px}
+.gap{margin-top:26px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}.spot>*{min-width:0}.gap b{font:900 clamp(40px,5.6vw,72px)/1 var(--disp);color:var(--pink);letter-spacing:-.04em}.gap span{font:400 12px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);max-width:260px}
 
 /* three facts */
 .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:44px}
@@ -65,12 +65,16 @@ td:first-child{color:var(--dim);font-size:12px;letter-spacing:.12em;text-transfo
 .other{margin-top:16px;font:400 12px var(--mono);color:var(--dim);word-break:break-all}.other b{color:var(--no);font-weight:500}
 footer{border-top:1px solid var(--line);padding:30px 0 50px;font:400 12px/1.9 var(--mono);color:var(--dim)}footer a{color:var(--pale);border-bottom:1px solid var(--line)}
 #toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);opacity:0;background:#fff;color:var(--ink);font:500 12px var(--mono);letter-spacing:.1em;padding:11px 16px;border-radius:999px;transition:.25s;z-index:50}#toast.on{opacity:1;transform:translate(-50%,0)}
+.tl{margin-top:36px;border:1px solid var(--line);border-radius:22px;overflow:hidden;overflow-x:auto}
+.tl .r{display:grid;grid-template-columns:64px 190px minmax(120px,1fr) 150px 170px 170px;gap:14px;align-items:center;padding:12px 18px;border-top:1px solid var(--line);font:400 13.5px var(--mono);min-width:880px}.tl .r:first-child{border-top:0}
+.tl .h{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}.tl img{width:52px;height:52px;border-radius:10px;display:block;object-fit:cover}
+.tl .me{background:rgba(125,255,184,.09)}.tl .me .t{color:var(--ok)}.tl a{color:var(--dim);border-bottom:1px solid var(--line)}.tl a:hover{color:var(--tx)}.tl .y{color:var(--ok)}.tl .n{color:var(--no)}
 @media(max-width:860px){.spot{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.tagL,.tagR{display:none}section{padding:70px 0}.top .hide{display:none}.stage{width:min(74vw,440px)}}
 @media(prefers-reduced-motion:reduce){.coin{animation:none!important}}
 </style>
 </head>
 <body>
-<header><a class="logo" href="#top"><img src="coin.png" alt="">DCTY</a><div class="top"><a class="btn hide" href="#spot">Spot the difference</a><a class="btn hide" id="x-top" hidden target="_blank" rel="noopener">X</a><a class="btn go" id="buy-top" target="_blank" rel="noopener">Buy DCTY</a></div></header>
+<header><a class="logo" href="#top"><img src="coin.png" alt="">DCTY</a><div class="top"><a class="btn hide" href="#spot">Spot the difference</a><a class="btn hide" href="#first">Mint order</a><a class="btn hide" id="x-top" hidden target="_blank" rel="noopener">X</a><a class="btn go" id="buy-top" target="_blank" rel="noopener">Buy DCTY</a></div></header>
 
 <main id="top" class="hero">
   <div class="word" aria-hidden="true">DCTY</div>
@@ -98,12 +102,20 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;font:400 12px/1.9 va
   </div>
 </div></section>
 
+<section id="first"><div class="wrap">
+  <div class="kick">Mint order · on-chain timestamps, UTC</div><h2><span id="tl-n"></span> Dacity coins came first.<br><em>None got all three right.</em></h2>
+  <p class="lead">Right ticker, right name, right image. Every earlier coin with the DCTY ticker or the pink coin is listed here with the time Solana recorded its mint. Click an address to check it yourself.</p>
+  <div class="tl" id="tl"></div>
+  <div class="kick" style="margin-top:56px">After the mint</div><h2 style="font-size:clamp(24px,3.6vw,42px)">Then the copies came. <em>Same image, later.</em></h2>
+  <div class="tl" id="tl2"></div>
+</div></section>
+
 <section><div class="wrap">
   <div class="kick">The case</div><h2>A coin's image<br><em>is forever.</em></h2>
   <div class="facts">
     <div class="fact"><s>01</s><h3>The picture is locked</h3><p>Both tokens have their update authority set to none. Nobody can swap the image on either one, ever. Check it on Solscan.</p></div>
     <div class="fact"><s>02</s><h3>The runner ran with the wrong one</h3><p>It was minted with the outline logo. Millions in market cap, and its picture is still not the coin.</p></div>
-    <div class="fact"><s>03</s><h3>This is the first one with the coin</h3><p>Minted 18 November 2026 with the pink coin as its image. The community took it over and runs it now.</p></div>
+    <div class="fact"><s>03</s><h3>This is the first with all three</h3><p>Minted 18 November 2026 at 15:59:45 UTC: the first DacityCoin with the right ticker, name and image. The community took it over and runs it now.</p></div>
   </div>
 </div></section>
 
@@ -118,6 +130,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;font:400 12px/1.9 va
 <div id="toast">Copied</div>
 
 <script src="config.js"></script>
+<script src="timeline.js"></script>
 <script>
 (() => {
   const C = window.DCTY, $ = (s) => document.querySelector(s);
@@ -143,9 +156,16 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;font:400 12px/1.9 va
 
   // live market caps, straight from DexScreener
   const money = (n) => (n >= 1e9 ? '$' + (n / 1e9).toFixed(2) + 'B' : n >= 1e6 ? '$' + (n / 1e6).toFixed(2) + 'M' : n >= 1e3 ? '$' + (n / 1e3).toFixed(1) + 'K' : '$' + Math.round(n));
-  const cap = async (m) => { const j = await (await fetch('https://api.dexscreener.com/latest/dex/tokens/' + m)).json(); const p = (j.pairs || []).filter((x) => x.baseToken && x.baseToken.address === m).sort((a, b) => ((b.liquidity || {}).usd || 0) - ((a.liquidity || {}).usd || 0))[0]; return p ? p.marketCap || p.fdv || 0 : 0; };
+  const cap = async (m) => { const j = await (await fetch('https://api.dexscreener.com/latest/dex/tokens/' + m)).json(); const p = (j.pairs || []).filter((x) => x.baseToken && x.baseToken.address === m).sort((a, b) => ((b.volume || {}).h24 || 0) - ((a.volume || {}).h24 || 0))[0]; return p ? p.marketCap || p.fdv || 0 : 0; };
   const live = async () => { try { const [a, b] = await Promise.all([cap(C.ca), cap(C.runner)]); if (a) { $('#mc-og').textContent = $('#t-og').textContent = money(a); } if (b) { $('#mc-run').textContent = $('#t-run').textContent = money(b); } if (a && b) $('#gap').textContent = Math.round(b / a).toLocaleString('en-US') + 'x'; } catch {} };
   live(); setInterval(live, 30000);
+
+  // mint order: rows come from timeline.js, each time is the block time of the mint's first transaction
+  const TL = window.DCTY_TL; if (TL) { const p2 = (n) => String(n).padStart(2, '0'), MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const when = (t) => { const d = new Date(t); return `${p2(d.getUTCDate())} ${MON[d.getUTCMonth()]} ${d.getUTCFullYear()} · ${p2(d.getUTCHours())}:${p2(d.getUTCMinutes())}:${p2(d.getUTCSeconds())}`; }, mk = (ok) => `<span class="${ok ? 'y' : 'n'}">${ok ? '✓' : '✗'}</span>`;
+    const head = '<div class="r h"><span></span><span>Minted (UTC)</span><span>Address</span><span>Ticker</span><span>Name</span><span>Image</span></div>';
+    const row = (r, copy) => `<div class="r${r.me ? ' me' : ''}"><img src="${r.img}" alt="" loading="lazy"><span class="t">${when(r.time)}</span><a href="https://solscan.io/token/${r.a}" target="_blank" rel="noopener">${r.a.slice(0, 6)}…${r.a.slice(-4)}</a><span>${mk(r.t)} ${r.ticker}</span><span>${mk(r.n)} ${r.name}</span><span>${r.me ? mk(true) + ' the coin' : copy ? '<span class="n">copy, +' + r.late + '</span>' : mk(r.i) + ' ' + r.short}</span></div>`;
+    $('#tl-n').textContent = TL.before; $('#tl').innerHTML = head + TL.rows.map((r) => row(r)).join(''); $('#tl2').innerHTML = head + [TL.rows.find((r) => r.me), ...TL.after].map((r) => row(r, !r.me)).join(''); }
 })();
 </script>
 </body>

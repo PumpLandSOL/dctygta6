@@ -9,7 +9,35 @@ const BIO = 'Two DacityCoins share one name and one ticker. Only one was minted 
 const DESC = 'DCTY is the DacityCoin minted with the coin itself as its image. Another DacityCoin with the same name and ticker was minted with only the logo, and because both tokens have no update authority, neither picture can ever be changed. This is a community takeover of the one that got it right. Check the address before you buy: it starts with 6GTD.';
 // [title, media, section, text]. Market caps: DexScreener, 19 Nov 2026.
 const T = [
-  ['Pinned', 'dcty-g01-spot.png', '#spot', `Spot the difference.
+  ['Pinned', 'dcty-g07-timeline.png', '#first', `36 Dacity coins were minted before this one.
+
+Wrong ticker, wrong name or wrong image. Every one of them.
+
+18 Nov, 15:59:45 UTC: the first DacityCoin with all three right.
+
+$DCTY`],
+  ['Receipts by timestamp', 'dcty-g08-matrix.png', '#first', `Ticker. Name. Image.
+
+Seven earlier coins, each with its mint time straight from Solana. Each one misses at least one.
+
+Row eight doesn't.
+
+$DCTY`],
+  ['First', 'dcty-g09-first.png', '#first', `18 November 2026, 15:59:45 UTC.
+
+That is the block where the first DacityCoin with the right ticker, name and image was minted.
+
+You can't backdate a block.
+
+$DCTY`],
+  ['Copies', 'dcty-g10-copies.png', '#first', `66 seconds after the mint, the first copy showed up with the same image.
+
+15 minutes later, another.
+
+Copies only copy the one that got it right.
+
+$DCTY`],
+  ['Spot the difference', 'dcty-g01-spot.png', '#spot', `Spot the difference.
 
 Two DacityCoins. Same name. Same ticker.
 One was minted with the coin. One was minted with a logo.

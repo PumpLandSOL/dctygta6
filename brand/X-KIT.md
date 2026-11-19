@@ -18,7 +18,63 @@ pump.fun / DexScreener description:
 DCTY is the DacityCoin minted with the coin itself as its image. Another DacityCoin with the same name and ticker was minted with only the logo, and because both tokens have no update authority, neither picture can ever be changed. This is a community takeover of the one that got it right. Check the address before you buy: it starts with 6GTD.
 ```
 
-## Pinned (212 chars) · dcty-g01-spot.png
+## Pinned (206 chars) · dcty-g07-timeline.png
+
+```
+36 Dacity coins were minted before this one.
+
+Wrong ticker, wrong name or wrong image. Every one of them.
+
+18 Nov, 15:59:45 UTC: the first DacityCoin with all three right.
+
+https://dctygta6.com#first
+
+$DCTY
+```
+
+## Receipts by timestamp (173 chars) · dcty-g08-matrix.png
+
+```
+Ticker. Name. Image.
+
+Seven earlier coins, each with its mint time straight from Solana. Each one misses at least one.
+
+Row eight doesn't.
+
+https://dctygta6.com#first
+
+$DCTY
+```
+
+## First (191 chars) · dcty-g09-first.png
+
+```
+18 November 2026, 15:59:45 UTC.
+
+That is the block where the first DacityCoin with the right ticker, name and image was minted.
+
+You can't backdate a block.
+
+https://dctygta6.com#first
+
+$DCTY
+```
+
+## Copies (180 chars) · dcty-g10-copies.png
+
+```
+66 seconds after the mint, the first copy showed up with the same image.
+
+15 minutes later, another.
+
+Copies only copy the one that got it right.
+
+https://dctygta6.com#first
+
+$DCTY
+```
+
+## Spot the difference (212 chars) · dcty-g01-spot.png
 
 ```
 Spot the difference.
