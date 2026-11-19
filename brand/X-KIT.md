@@ -29,7 +29,7 @@ One was minted with the coin. One was minted with a logo.
 The logo is at a $14.9M market cap.
 The coin is at $15K.
 
-https://dctygta6.xyz#spot
+https://dctygta6.com#spot
 
 $DCTY
 ```
@@ -43,7 +43,7 @@ The right one starts with 6GTD:
 
 6GTDzJNqDfJ7v4kpmbs4aupxQZnVwgRqTD4WFU7fpump
 
-https://dctygta6.xyz#buy
+https://dctygta6.com#buy
 ```
 
 ## Receipts (142 chars) · dcty-g02-table.png
@@ -55,7 +55,7 @@ Image: one is the coin, one is not.
 
 That single row is the whole trade.
 
-https://dctygta6.xyz#spot
+https://dctygta6.com#spot
 
 $DCTY
 ```
@@ -69,7 +69,7 @@ That is how far the market cap of the wrong picture sits above the market cap of
 
 Same name. Same ticker. 977x apart.
 
-https://dctygta6.xyz#spot
+https://dctygta6.com#spot
 
 $DCTY
 ```
@@ -81,7 +81,7 @@ Neither DacityCoin has an update authority. The pictures are locked for good.
 
 So the $14.9M one keeps the wrong image forever, and the right image only exists here.
 
-https://dctygta6.xyz
+https://dctygta6.com
 
 $DCTY
 ```
@@ -91,7 +91,7 @@ $DCTY
 ```
 Only one has the coin.
 
-https://dctygta6.xyz
+https://dctygta6.com
 
 $DCTY
 ```
@@ -103,7 +103,7 @@ Nobody owns this one. The community took it over because it is the DacityCoin th
 
 Site is up. Receipts are on it. The address is on it.
 
-https://dctygta6.xyz#buy
+https://dctygta6.com#buy
 
 $DCTY
 ```
